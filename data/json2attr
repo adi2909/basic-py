@@ -1,0 +1,166 @@
+#!/usr/bin/env python
+import json
+all_hosts = {}
+with open('allHostInfo.json', 'r') as fh:
+	all_hosts = json.load(fh)
+	for mc in all_hosts:
+		ip = all_hosts[mc]['facts']['ipaddress_prod']['server']
+		burnstatus = all_hosts[mc]['attributes']['burnin_cpu']['server']
+		if all_hosts[mc]['attributes'].has_key('bios_update_start'):
+			bios_start = all_hosts[mc]['attributes']['bios_update_start']['server']
+			if all_hosts[mc]['attributes'].has_key('bios_update_complete') :
+				bios_end = all_hosts[mc]['attributes']['bios_update_complete']['server']
+				print "%s\t%s\t%s\t%s\t%s"	% (mc, ip, burnstatus,	bios_start, bios_end)
+			else:
+				print "%s\t%s\t%s\t%s"	% (mc, ip, burnstatus,	bios_start)
+		else:
+			print "%s\t%s\t%s"	% (mc, ip, burnstatus)
+
+#
+#	"smfd-aee-23-sr2.devel.twitter.com":{
+#		 "facts":{
+#			 "bmc_address":{
+#				 "server":"10.6.108.121"
+#			 },
+#			"ipaddress_prod":{
+#				 "server":"10.34.108.121"
+#				},
+#			"hostname":{
+#				"server":"smfd-aee-23-sr2.devel.twitter.com"
+#			 }
+#		 },
+#		"attributes":{
+#			 "kernel":{
+#					"role":"kernel-2.6.39-stable.x86_64"
+#				},
+#				"bios_update_start":{
+#					"server":"2012-10-11T20:53:18"
+#				},
+#	 		"hostreport_netlinks":{
+#				"server":"2"
+#				},
+#			"kickstart_post":{
+#				"server":"2012-10-12T00:55:27"
+#				},
+#			"intake_date":{
+#				"server":"2012-06-21T15:14:17"
+#				},
+#			"unmonitored":{
+#				"server":"9999999999"
+#				},
+#			"hostreport_boottime":{
+#				"server":"1350004101.03"
+#				},
+#			"hostreport_cpucores":{
+#				"server":"16"
+#				},
+#			"ldap_sync_blocked":{
+#		 		"server":"false"
+#	 		},
+#			"puppet_hammer_start":{
+#				 "server":"2012-10-12T01:08:50"
+#			},
+#			"eth0_switch_port_map":{
+#				"server":"Gi 0\/21"
+#			},
+#		"allocated":{
+#			"server":"true"
+#			},
+#		"hostreport_bios_release_date":{
+#			"server":"12\/23\/2011"
+#			},
+#		"hostreport_lastrun":{
+#			"server":"1350004129.48"
+#			},
+#		"bios_settings_update_complete":{
+#			"server":"2012-10-11T20:53:22"
+#			},
+#		"allocated_to":{
+#			"server":"None"
+#			},
+#		"bmc_update_start":{
+#			"server":"2012-10-11T20:53:21"
+#			},
+#		"allocation_ticket":{
+#			"server":"PROV-1004"
+#			},
+#		"puppet_hammer_complete":{
+#			"server":"2012-10-12T01:12:22"
+#			},
+#		"physical_verification":{
+#			"server":"true"
+#			},
+#		"provision_stage":{
+#			"server":"puppet_complete"
+#			},
+#		"hostreport_macaddress_eth0":{
+#			"server":"00:26:6c:f2:c8:e0"
+#			},
+#		"hostreport_macaddress_eth1":{
+#			"server":"00:26:6c:f2:c8:e1"
+#			},
+#		"scribe_class":{
+#			"datacenter":"devel"
+#			},
+#		"bios_update_complete":{
+#			"server":"2012-10-11T20:53:21"
+#			},
+#		"hostreport_interfaces":{
+#			"server":"eth0, eth1"
+#			},
+#		"burnin_cpu":{
+#			"server":"COMPLETED"
+#			},
+#		"hostreport_memory":{
+#			"server":"25175224320"
+#			},
+#		"bios_settings_update_start":{
+#			"server":"2012-10-11T20:53:22"
+#			},
+#	 	"hostreport_serial_number":{
+#			"server":"G33NMN1"
+#			},
+#		"reinstall_by":{
+#			"server":"vinson"
+#			},
+#		"hostreport_cpusockets":{
+#			"server":"2"
+#			},
+#		"burnin_ram":{
+#			"server":"COMPLETED"
+#			},
+#		"burnin_disk":{
+#			"server":"COMPLETED"
+#			},
+#		"hostreport_kernelrelease":{
+#			"server":"2.6.39-t6.el5"
+#			},
+#		"puppet_monitored_status_returnval":{
+#			"server":"0"
+#			},
+#		"bmc_update_complete":{
+#			"server":"2012-10-11T20:53:22"
+#			},
+#		"hostreport_bios_version":{
+#			"server":"1.66"
+#			},
+#		"hostreport_cputotalsockets":{
+#			"server":"4"
+#			},
+#		"hostreport_physical_memory":{
+#			"server":"25769803776"
+#			},
+#		"hostreport_cpuspeed":{
+#			"server":"2399.847"}
+#			},
+#		"parts":{
+#			},
+#		"groups":{
+#			"platform":"katydid",
+#			"role":"undefined",
+#			"rack":"aee",
+#			"datacenter":"smfd"
+#			}
+#	 }
+#}
+
