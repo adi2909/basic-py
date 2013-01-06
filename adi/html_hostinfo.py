@@ -42,7 +42,7 @@ with open('allHostInfo.json', 'r') as fh:
                                 "<td" + bios_start + "</td>\n" +\
                                 "</tr>\n"
 		else:
-			print "%s\t%s\t%s"	% (mc, ip, burnstatus)
+			#print "%s\t%s\t%s"	% (mc, ip, burnstatus)
 			print "<tr>\n" +\
                                 "<td" + mc + "</td>\n" +\
                                 "<td" + ip + "</td>\n" +\
