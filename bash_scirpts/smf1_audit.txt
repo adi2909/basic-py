@@ -1,0 +1,43 @@
+[aranjan@smfc-aih-01-sr1 ~]$ bash smf1_full_bond.sh 
+smf1_full_bond.sh: line 8: which cql 2>/dev/null: No such file or directory
+
+smf1_full_bond.sh: line 11: [a=a]: command not found
+CQL not found, Please install it from: http://confluence.smf1.twitter.com/display/OBSERVE/CQL
+
+ts(SUM, system.network, smf1-asr-01-sr2, if/eth0/bonding/status): smf1-asr-01-sr2
+
+smf1-asr-01-sr2 2013-01-09 06:22:00 0.0
+
+ts(SUM, system.network, smf1-asr-05-sr2, if/eth0/bonding/status): smf1-asr-05-sr2
+
+smf1-asr-05-sr2 2013-01-09 06:22:00 1.0
+
+ts(SUM, system.network, smf1-asr-10-sr2, if/eth0/bonding/status): smf1-asr-10-sr2
+
+smf1-asr-10-sr2 2013-01-09 06:22:00 1.0
+
+ts(SUM, system.network, smf1-asr-10-sr3, if/eth0/bonding/status): smf1-asr-10-sr3
+
+smf1-asr-10-sr3 2013-01-09 06:22:00 1.0
+
+ts(SUM, system.network, smf1-asr-13-sr2, if/eth0/bonding/status): smf1-asr-13-sr2
+
+smf1-asr-13-sr2 2013-01-09 06:22:00 1.0
+
+ts(SUM, system.network, smf1-asr-16-sr2, if/eth0/bonding/status): smf1-asr-16-sr2
+
+smf1-asr-16-sr2 2013-01-09 06:22:00 1.0
+
+ts(SUM, system.network, smf1-asr-16-sr3, if/eth0/bonding/status): smf1-asr-16-sr3
+
+smf1-asr-16-sr3 2013-01-09 06:22:00 1.0
+
+ts(SUM, system.network, smf1-asr-22-sr2, if/eth0/bonding/status): smf1-asr-22-sr2
+
+smf1-asr-22-sr2 2013-01-09 06:22:00 1.0
+
+ts(SUM, system.network, smf1-asr-22-sr3, if/eth0/bonding/status): smf1-asr-22-sr3
+
+smf1-asr-22-sr3 2013-01-09 06:22:00 1.0
+
+ts(SUM, system.network, smf1-asr-28-sr2, if/eth0/bonding/status): smf1-asr-28-sr2
