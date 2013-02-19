@@ -1,0 +1,14 @@
+smf1-ajf-11-sr3.prod.twitter.com
+{"/timestamp": 1361300831.319885}
+
+smf1-atb-10-sr2.prod.twitter.com
+{"/system/network/if/eth0/bonding/status": 1, "/timestamp": 1361300831.3257289}
+
+smf1-avm-21-sr1.prod.twitter.com
+{"/system/network/if/eth0/bonding/status": 1, "/timestamp": 1361300831.330333}
+
+smf1-alf-15-sr1.prod.twitter.com
+{"/system/network/if/eth0/bonding/status": 1, "/timestamp": 1361300831.335448}
+
+smf1-aaw-23-sr4.prod.twitter.com
+{"/timestamp": 1361300831.3391521}
