@@ -58,11 +58,13 @@ tr:nth-child(odd) { background: #ded; }
 
 
 #with open('allHostInfo.json', 'r') as file_handle:
-with open(args.infile, 'r') as file_handle:
-	all_hosts = json.load(file_handle)
-  #
-  # XXXXX: CHANGE THIS HEADER WHENEVER WE ADD/DROP FIELDS TO OUTPUT
-  #
+#with open(args.infile, 'r') as file_handle:
+#	all_hosts = json.load(file_handle)
+
+obj= urllib2.urlopen('http://audubon.smfd.twitter.com/mdb/api/server.json?')
+
+all_hosts= json.load(obj)
+
 	print "<tr>\n<th>%s</th>\n<th>%s</th>\n<th>%s</th>\n<th>%s</th>\n<th>%s</th>\n" \
       %( 'Machine', 'IP', 'Burn_Status', 'BIOS start', 'BIOS end')
 			
@@ -101,5 +103,5 @@ with open(args.infile, 'r') as file_handle:
 print '''
 </table>
 </body>
-</html>
+/html>
 '''
